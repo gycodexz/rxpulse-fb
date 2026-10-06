@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+
+body {
+  @apply bg-slate-50 text-slate-800 dark:bg-brand-950 dark:text-slate-100 transition-colors duration-200;
+}
+
+::selection { @apply bg-brand-200 dark:bg-brand-700; }
+
+.card {
+  @apply bg-white dark:bg-brand-900 border border-slate-200 dark:border-brand-800 rounded-xl shadow-card;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg bg-brand-600 text-white px-4 py-2.5 text-sm font-medium
+  hover:bg-brand-700 active:bg-brand-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg border border-slate-300 dark:border-brand-700
+  text-slate-700 dark:text-slate-200 px-4 py-2.5 text-sm font-medium hover:bg-slate-100 dark:hover:bg-brand-800 transition-colors;
+}
+
+.input-field {
+  @apply w-full rounded-lg border border-slate-300 dark:border-brand-700 bg-white dark:bg-brand-900
+  px-3.5 py-2.5 text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500;
+}
+
+.label-text {
+  @apply block text-sm font-medium text-slate-600 dark:text-slate-300 mb-1.5;
+}
+
+.table-shell {
+  @apply w-full text-sm text-left border-collapse;
+}
+.table-shell thead th {
+  @apply px-4 py-3 bg-slate-100 dark:bg-brand-800/60 text-slate-500 dark:text-slate-300 font-medium text-xs border-b border-slate-200 dark:border-brand-800;
+}
+.table-shell tbody td {
+  @apply px-4 py-3 border-b border-slate-100 dark:border-brand-800/60;
+}
+.table-shell tbody tr:hover {
+  @apply bg-slate-50 dark:bg-brand-800/30;
+}
+
+.badge {
+  @apply inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium;
+}
